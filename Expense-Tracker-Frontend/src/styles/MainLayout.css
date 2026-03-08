@@ -1,0 +1,225 @@
+/* ============================
+   MAIN LAYOUT CONTAINER
+=============================== */
+.layout-container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background: #f5f6fa;
+  position: relative;
+}
+
+/* Sidebar width never changes now */
+.layout-container.collapsed .content {
+  margin-left: 230px;
+}
+
+/* ============================
+   OUTSIDE COLLAPSE ARROW BUTTON
+=============================== */
+.collapse-arrow {
+  position: fixed;
+  top: 240px;
+  left: 210px;
+  height: 32px;
+  width: 32px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, left 0.3s ease, background 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.collapse-arrow:hover {
+  background: #eef1ff;
+}
+
+.collapse-arrow.collapsed {
+  transform: rotate(180deg);
+  
+}
+
+/* Arrow position stays fixed because sidebar no longer shrinks */
+.layout-container.collapsed .collapse-arrow {
+  left: 240px;
+}
+
+/* ============================
+   SIDEBAR
+=============================== */
+.sidebar {
+  width: 230px; /* FIXED WIDTH */
+  background: #ffffff;
+  border-right: 1px solid #e6e6e6;
+  padding: 20px 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transition: border-radius 0.3s ease;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+/* 🚫 NO WIDTH CHANGE */
+.sidebar.collapsed {
+  width: 230px;
+}
+
+/* Logo fade-out only */
+.logo {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  transition: opacity 0.25s ease;
+}
+
+
+
+/* ============================
+   PROFILE PICTURE
+=============================== */
+.profile-pic-container {
+  width: 120px;
+  height: 120px;
+  margin-top: 10px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #ddd;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: none; /* No shrinking */
+}
+
+/* ⚠️ DO NOT shrink profile image */
+.sidebar.collapsed .profile-pic-container {
+  width: 120px;
+  height: 120px;
+}
+
+.profile-pic-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============================
+   NAVIGATION LINKS
+=============================== */
+.nav-links {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nav-links a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 15px;
+  text-decoration: none;
+  color: #444;
+  font-size: 16px;
+  border-radius: 8px;
+    transition: background 0.25s ease, padding 0.25s ease, color 0.25s ease;
+    height: 48px;
+}
+
+.nav-links a:hover {
+  background: hwb(287 60% 5%);
+}
+
+/* Collapse ONLY text */
+.sidebar.collapsed .link-text {
+  display: none;
+    opacity: 0;
+  width: 0;
+}
+
+/* Only collapse text */
+.sidebar.collapsed .nav-links a span {
+  display: none;
+
+}
+
+/* Center icons when collapsed */
+.sidebar.collapsed .nav-links a {
+  justify-content: center;
+  padding: 12px 0px;
+}
+
+/* ============================
+   LOGOUT BUTTON
+=============================== */
+.logout-btn {
+  margin-top: auto;
+  width: 100%;
+  padding: 14px;
+  background: hwb(287 40% 7%);
+  border: none;
+  border-radius: 10px;
+  color: #d13434;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s ease;
+}
+
+.logout-btn:hover {
+  background: hwb(287 60% 5%);
+}
+
+/* Hide only text */
+.sidebar.collapsed .logout-btn span {
+  display: none;
+}
+
+/* ============================
+   MAIN CONTENT
+=============================== */
+.content {
+  margin-left: 230px; /* fixed since sidebar never shrinks */
+  padding: 20px;
+  width: calc(100% - 230px);
+  transition: margin-left 0.3s ease;
+}
+
+/* NO SHIFT ON COLLAPSE ANYMORE */
+.layout-container.collapsed .content {
+  margin-left: 230px;
+  width: calc(100% - 230px);
+}
+
+.link-text {
+  transition: opacity 0.25s ease, width 0.25s ease;
+}
+.nav-links a.active {
+  background: hwb(287 40% 7%);        /* light purple */
+  color: #ebe4ff;             /* purple text */
+  font-weight: 600;
+}
+
+.nav-links a.active .icon {
+  color: #ebe4ff;
+}
+.nav-links a.active:hover {
+  background: hwb(287 60% 5%);
+}
