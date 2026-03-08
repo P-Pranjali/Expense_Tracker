@@ -1,22 +1,17 @@
 package com.expensetracker.backend.service;
 
-import com.cloudinary.Cloudinary;
-import com.cloudinary.utils.ObjectUtils;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
-import java.util.Map;
 
-@Service
-public class ImageUploadService {
+public interface ImageUploadService {
 
-    @Autowired
-    private Cloudinary cloudinary;
-
-    public String uploadImage(MultipartFile file) throws IOException {
-        Map uploadResult = cloudinary.uploader().upload(file.getBytes(), ObjectUtils.emptyMap());
-        return (String) uploadResult.get("secure_url");
-    }
+    /**
+     * Uploads an image to Cloudinary and returns the URL.
+     *
+     * @param file the image file to upload
+     * @return the secure URL of the uploaded image
+     * @throws IOException if an error occurs during file upload
+     */
+    String uploadImage(MultipartFile file) throws IOException;
 }

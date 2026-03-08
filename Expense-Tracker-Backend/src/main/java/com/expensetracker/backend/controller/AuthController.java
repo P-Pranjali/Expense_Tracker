@@ -5,7 +5,7 @@ import com.expensetracker.backend.dto.LoginRequest;
 import com.expensetracker.backend.dto.SignupRequest;
 import com.expensetracker.backend.model.User;
 import com.expensetracker.backend.repository.UserRepository;
-import com.expensetracker.backend.service.AuthService;
+import com.expensetracker.backend.service.impl.AuthServiceimpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +16,7 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class AuthController {
 
-    private final AuthService authService;
+    private final AuthServiceimpl authService;
     private final UserRepository userRepository;
     private final JwtUtil jwtUtil;
 

@@ -2,15 +2,15 @@ package com.expensetracker.backend.controller;
 
 import com.expensetracker.backend.config.JwtUtil;
 import com.expensetracker.backend.model.Expense;
-import com.expensetracker.backend.service.ExpenseService;
-import com.expensetracker.backend.service.ImageUploadService;
+import com.expensetracker.backend.service.impl.ExpenseServiceimpl;
+import com.expensetracker.backend.service.impl.ImageUploadServiceimpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.multipart.MultipartFile;   // <-- IMPORTANT IMPORT
-import com.expensetracker.backend.service.PdfGeneratorService;
+import com.expensetracker.backend.service.impl.PdfGeneratorServiceimpl;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
@@ -25,13 +25,13 @@ import org.springframework.http.MediaType;
 public class ExpenseController {
 
     @Autowired
-    private ExpenseService expenseService;
+    private ExpenseServiceimpl expenseService;
 
     @Autowired
-    private ImageUploadService imageUploadService; // <-- IMPORTANT
+    private ImageUploadServiceimpl imageUploadService; // <-- IMPORTANT
 
     @Autowired
-    private PdfGeneratorService pdfGeneratorService;
+    private PdfGeneratorServiceimpl pdfGeneratorService;
 
     @Autowired
     private JwtUtil jwtUtil;

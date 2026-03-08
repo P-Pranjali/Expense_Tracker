@@ -3,7 +3,7 @@ package com.expensetracker.backend.controller;
 import com.expensetracker.backend.config.JwtUtil;
 import com.expensetracker.backend.model.User;
 import com.expensetracker.backend.repository.UserRepository;
-import com.expensetracker.backend.service.ImageUploadService;
+import com.expensetracker.backend.service.impl.ImageUploadServiceimpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -19,7 +19,7 @@ public class UserController {
 
     private final UserRepository userRepository;
     private final JwtUtil jwtUtil;
-    private final ImageUploadService imageUploadService;
+    private final ImageUploadServiceimpl imageUploadService;
 
     // ---------------------------------------------------
     // GET Profile of Logged-in User
