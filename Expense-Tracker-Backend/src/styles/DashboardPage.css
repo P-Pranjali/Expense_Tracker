@@ -1,0 +1,331 @@
+/* =========================================================
+   DashboardPage.css — FINAL VERSION (Top 2 cols + Bottom Full)
+   ========================================================= */
+
+/* MAIN PAGE WRAPPER */
+.dashboard-container {
+  width: 100%;
+  margin: 0;              /* reset */
+  padding: 20px;          /* nice spacing */
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  background: #f5f6fa;
+  font-family: "Inter", system-ui;
+}
+
+
+.dashboard-container h1{
+  margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: 700;
+    color: hwb(287 40% 7%);
+}
+
+/* =========================================================
+   TOP ROW (LEFT PIE + RIGHT EXPENSE TABLE)
+   ========================================================= */
+
+.top-row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.9fr 1.2fr;
+  gap: 28px;
+    align-items: start;
+}
+
+/* LEFT SECTION */
+.left-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+}
+
+/* PIE CHART BOX */
+.chart-wrapper {
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(18, 25, 36, 0.06);
+ padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  overflow: visible !important;
+}
+
+
+
+/* Month Selector */
+.month-select-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.month-select-container select {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+}
+
+/* SUMMARY BOX */
+.summary-box {
+  background: #ffffff;
+  padding: 14px 16px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(18, 25, 36, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.summary-item .value {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* =========================================================
+   RIGHT SECTION — EXPENSE TABLE
+   ========================================================= */
+
+.right-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.right-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+    min-width: 0;
+  overflow: visible;
+}
+
+.add-expense-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: hwb(287 40% 7%);
+  color: #fff;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 6px 16px rgba(90,109,255,0.12);
+}
+
+.add-expense-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(90,109,255,0.14);
+background:hwb(287 60% 5%);
+}
+
+/* TABLE CARD */
+.table-container {
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(18,25,36,0.06);
+
+  min-height: 550px;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+   overflow-y: auto;      /* scroll only vertically */
+  overflow-x: visible;   /* prevents text clipping */
+}
+
+.expense-list-scroll {
+  overflow-y: visible;
+  flex: 1;
+  padding-right: 6px;
+}
+
+/* =========================================================
+   BOTTOM — FULL WIDTH YEARLY TABLE
+   ========================================================= */
+
+.bottom-row {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(18,25,36,0.06);
+}
+
+.yearly-table-card {
+  width: 100%;
+}
+
+/* Table wrapper */
+.full-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Table Style */
+.full-table-wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  color: #111827;
+}
+
+.full-table-wrapper th {
+  background: #4c7cf3;
+  color:black;
+  padding: 8px 10px;
+  text-align: left;
+  font-weight: 700;
+  position: sticky;
+  top: 0;
+}
+
+.full-table-wrapper td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #eef2ff;
+}
+
+/* Month column */
+.full-table-wrapper th:first-child,
+.full-table-wrapper td:first-child {
+  width: 120px;
+  font-weight: 600;
+}
+
+/* No border on last row */
+.full-table-wrapper tr:last-child td {
+  border-bottom: none;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .top-row {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================================================
+   POPUP OVERLAY + FORM BOX (IMPROVED)
+   ========================================================= */
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+
+ /* backdrop-filter: blur(2px);   Soft blur for modern effect */
+}
+
+.popup-box {
+  background: #ffffff;
+  width: 460px;
+  padding: 32px;
+  border-radius: 22px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.20);
+  animation: popupFade 0.28s ease;
+}
+
+/* Heading */
+.popup-box h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 22px;
+  color: #1f2937;
+  letter-spacing: -0.3px;
+}
+
+
+
+/* =========================================================
+   Animation
+   ========================================================= */
+
+@keyframes popupFade {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.view-box {
+  animation: viewPop .25s ease;
+}
+
+@keyframes viewPop {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ============================
+   Dashboard Welcome Header Box
+   ============================ */
+.welcome-box {
+  width: 100%;
+  background: #ffffff;
+  padding: 18px 22px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(18, 25, 36, 0.06);
+  margin-bottom: 0px;
+}
+
+.welcome-box h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: hwb(287 40% 7%);
+  
+  /* #4c278a */
+}
+.welcome-box p{
+   font-size: 1.125rem;
+  color: var(--text-secondary);
+  margin-bottom: 0;
+}
