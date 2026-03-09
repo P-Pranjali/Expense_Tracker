@@ -1,6 +1,6 @@
 package com.expensetracker.backend.service;
 
-import com.expensetracker.backend.model.Expense;
+import com.expensetracker.backend.entity.Expense;
 import org.springframework.data.domain.Page;
 
 import java.time.LocalDate;

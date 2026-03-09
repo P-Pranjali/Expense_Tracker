@@ -9,6 +9,7 @@ import DashboardPage from "../pages/DashboardPage";
 import ProfilePage from "../pages/ProfilePage";  // Create next
 import MainLayout from "../components/MainLayout";
 import ExpensesPage from "../pages/MyExpenses";
+import MyEnvelopes from "../pages/MyEnvelopes"; // <-- new import
 
 function AppRoutes() {
   return (
@@ -28,6 +29,7 @@ function AppRoutes() {
           {/* Add more pages later: */}
           <Route path="expenses" element={<ExpensesPage />} />
           {/* <Route path="settings" element={<SettingsPage />} /> */}
+          <Route path="envelopes" element={<MyEnvelopes />} /> {/* <-- new route */}
        </Route>
       </Routes>
     </Router>

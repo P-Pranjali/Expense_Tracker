@@ -3,7 +3,7 @@ package com.expensetracker.backend.controller;
 import com.expensetracker.backend.config.JwtUtil;
 import com.expensetracker.backend.dto.LoginRequest;
 import com.expensetracker.backend.dto.SignupRequest;
-import com.expensetracker.backend.model.User;
+import com.expensetracker.backend.entity.User;
 import com.expensetracker.backend.repository.UserRepository;
 import com.expensetracker.backend.service.impl.AuthServiceimpl;
 import lombok.RequiredArgsConstructor;

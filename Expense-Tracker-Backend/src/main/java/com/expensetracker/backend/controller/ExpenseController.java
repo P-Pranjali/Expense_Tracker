@@ -1,7 +1,7 @@
 package com.expensetracker.backend.controller;
 
 import com.expensetracker.backend.config.JwtUtil;
-import com.expensetracker.backend.model.Expense;
+import com.expensetracker.backend.entity.Expense;
 import com.expensetracker.backend.service.impl.ExpenseServiceimpl;
 import com.expensetracker.backend.service.impl.ImageUploadServiceimpl;
 import org.springframework.beans.factory.annotation.Autowired;

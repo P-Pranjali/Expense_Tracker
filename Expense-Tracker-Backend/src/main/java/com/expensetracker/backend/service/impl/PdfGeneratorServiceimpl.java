@@ -122,7 +122,7 @@
 
 package com.expensetracker.backend.service.impl;
 
-import com.expensetracker.backend.model.Expense;
+import com.expensetracker.backend.entity.Expense;
 import com.expensetracker.backend.service.PdfGeneratorService;
 import com.lowagie.text.*;
 import com.lowagie.text.pdf.*;

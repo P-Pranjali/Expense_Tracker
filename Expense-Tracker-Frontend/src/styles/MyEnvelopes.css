@@ -1,0 +1,74 @@
+/* MyEnvelopes.css */
+
+.envelopes-container {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.envelope-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.envelope-form input[type="text"],
+.envelope-form input[type="number"],
+.envelope-form input[type="color"] {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  flex: 1 1 150px;
+}
+
+.envelope-form button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #4f46e5;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.envelope-form button:hover {
+  background-color: #4338ca;
+}
+
+.envelopes-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.envelope-card {
+  border: 2px solid #4f46e5;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #f9f9f9;
+}
+
+.envelope-card h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.envelope-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.envelope-actions button {
+  flex: 1;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #6b7280;
+  color: white;
+}
+
+.envelope-actions button:hover {
+  background-color: #4b5563;
+}

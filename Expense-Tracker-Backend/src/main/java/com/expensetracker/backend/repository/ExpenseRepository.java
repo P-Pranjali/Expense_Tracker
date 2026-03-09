@@ -1,6 +1,6 @@
 package com.expensetracker.backend.repository;
 
-import com.expensetracker.backend.model.Expense;
+import com.expensetracker.backend.entity.Expense;
 import org.springframework.data.domain.Page;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;

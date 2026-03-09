@@ -184,6 +184,41 @@ export const updateExpense = (id, expenseData, selectedImageFile) => {
   });
 };
 
+
+
+
+// ========== ENVELOPES ==========
+// export const getEnvelopes = () =>
+//   api.get("/envelopes/user", { params: { userId: getUserId() } });
+
+// export const createEnvelope = (envelope) =>
+//   api.post("/envelopes/create", envelope, { params: { userId: getUserId() } });
+
+// export const updateEnvelope = (id, envelope) =>
+//   api.put(`/envelopes/${id}`, envelope, { params: { userId: getUserId() } });
+
+// export const deleteEnvelope = (id) =>
+//   api.delete(`/envelopes/${id}`, { params: { userId: getUserId() } });
+
+// ========== ENVELOPES ==========
+const getUserIdSafe = () => {
+  const id = localStorage.getItem("userId");
+  if (!id) throw new Error("UserId missing. Login required.");
+  return id;
+};
+
+export const getEnvelopes = () =>
+  api.get("/envelopes/user", { params: { userId: getUserIdSafe() } });
+
+export const createEnvelope = (envelope) =>
+  api.post("/envelopes/create", envelope, { params: { userId: getUserIdSafe() } });
+
+export const updateEnvelope = (id, envelope) =>
+  api.put(`/envelopes/${id}`, envelope, { params: { userId: getUserIdSafe() } });
+
+export const deleteEnvelope = (id) =>
+  api.delete(`/envelopes/${id}`, { params: { userId: getUserIdSafe() } });
+
 // Download yearly PDF
 export const downloadYearlyPdf = (year) =>
   api.get(`/expenses/pdf/yearly/${year}`, {

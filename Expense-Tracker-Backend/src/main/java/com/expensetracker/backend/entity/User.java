@@ -1,4 +1,4 @@
-package com.expensetracker.backend.model;
+package com.expensetracker.backend.entity;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;

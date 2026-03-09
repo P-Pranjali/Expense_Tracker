@@ -91,6 +91,11 @@ function MainLayout() {
             <span className="NavLink-text">My Expenses</span>
           </NavLink>
 
+            <NavLink to="/envelopes"> {/* <-- New tab */}
+    <BadgeIndianRupee className="icon" /> {/* You can replace icon with another from lucide-react */}
+    <span className="NavLink-text">My Envelopes</span>
+  </NavLink>
+
           <NavLink to="/settings">
             <Settings className="icon" />
             <span className="NavLink-text">Settings</span>

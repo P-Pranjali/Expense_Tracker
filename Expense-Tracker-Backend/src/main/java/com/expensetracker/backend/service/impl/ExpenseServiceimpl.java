@@ -1,6 +1,6 @@
 package com.expensetracker.backend.service.impl;
 
-import com.expensetracker.backend.model.Expense;
+import com.expensetracker.backend.entity.Expense;
 import com.expensetracker.backend.repository.ExpenseRepository;
 import com.expensetracker.backend.service.ExpenseService;
 import org.springframework.beans.factory.annotation.Autowired;
