@@ -17,6 +17,7 @@ import java.util.Map;
 public class AuthController {
 
     private final AuthServiceimpl authService;
+
     private final UserRepository userRepository;
     private final JwtUtil jwtUtil;
 
