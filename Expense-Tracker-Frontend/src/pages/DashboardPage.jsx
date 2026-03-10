@@ -59,22 +59,6 @@ function DashboardPage() {
               <DashboardChart expenses={expenses} />
             </div>
 
-            {/* Summary */}
-
-            {/* <div className="summary-item">
-                <span className="label">Total Spent</span>
-                <span className="value">₹{totalSpent}</span>
-              </div>
-
-              <div className="summary-item">
-                <span className="label">Monthly Budget</span>
-                <span className="value">₹{monthlyBudget}</span>
-              </div>
-
-              <div className="summary-item">
-                <span className="label">Remaining</span>
-                <span className="value">₹{remaining}</span>
-              </div> */}
           </div>
 
 

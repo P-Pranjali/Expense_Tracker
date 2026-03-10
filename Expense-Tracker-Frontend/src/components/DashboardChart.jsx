@@ -113,19 +113,6 @@ const months = [
   "August","September","October","November","December"
 ];
 
-// const categoryColors = {
-//   Bills: "#e3eaff",
-//   Subscriptions: "#ffe3ec",
-//   Entertainment: "#e6f4ff",
-//   Food: "#fff4d6",
-//   Groceries: "#e5f9f7",
-//   Hospital: "#f3e8ff",
-//   Shopping: "#ffe8d9",
-//   Transport: "#e8f5e9",
-//   "veggies & fruits": "#fdecea",
-//   "Daily Needs": "#f3e5f5",
-//   Other: "#f0e6dc"
-// };
 
 // Category color map → same for table & pie for consistency:
 const categoryColors = {
