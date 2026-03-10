@@ -1,4 +1,15 @@
-\# Expense Tracker
+**# Expense Tracker**
+
+💻 Live Demo
+
+Check out the live app here: [Expense Tracker](https://tracker-for-expenses.onrender.com)
+
+You can use the following demo credentials to log in:
+
+- **Email:** jhon@gmail.com  
+- **Password:** Admin@123
+
+Feel free to explore the app and give feedback!
 
 
 
@@ -6,11 +17,11 @@ A full-stack expense tracking application that helps users manage and monitor th
 
 
 
-\## Tech Stack
+**## Tech Stack**
 
 
 
-Frontend
+**Frontend**
 
 \- React.js
 
@@ -20,7 +31,7 @@ Frontend
 
 
 
-Backend
+**Backend**
 
 \- Spring Boot
 
@@ -30,19 +41,19 @@ Backend
 
 
 
-Database
+**Database**
 
 \- MongoDB
 
 
 
-\## Features
+**## Features**
 
 
 
 \- User Signup \& Login
 
-\- Add, edit and delete expenses
+\- Add, edit, update and delete expenses
 
 \- Dashboard with charts
 
@@ -54,7 +65,7 @@ Database
 
 
 
-\## Project Structure
+**## Project Structure**
 
 
 
@@ -68,7 +79,7 @@ Expense\_Tracker
 
 
 
-\## How to Run
+**## How to Run**
 
 
 
