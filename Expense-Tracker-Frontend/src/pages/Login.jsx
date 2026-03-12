@@ -12,6 +12,7 @@ function Login() {
   });
 
   const [error, setError] = useState("");
+   const [loading, setLoading] = useState(false); //Added loading state
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -19,6 +20,7 @@ function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true); //Start loading
 
     try {
       const res = await loginUser(form);
@@ -39,6 +41,8 @@ function Login() {
       navigate("/dashboard");
     } catch (err) {
       setError("Login failed. Check your credentials.");
+    } finally {
+      setLoading(false); //Stop loading
     }
   };
 
@@ -68,7 +72,12 @@ function Login() {
           required
         />
 
-        <button type="submit">Login</button>
+       
+        {/* ✅ Updated button with loading */}
+        <button type="submit" disabled={loading}>
+          {loading ? "Logging in..." : "Login"}
+        </button>
+
 
         <p className="switch-text">
           Don’t have an account?{" "}
