@@ -23,8 +23,37 @@ function Signup() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+
+  //   if (form.password !== form.confirmPassword) {
+  //     setError("Passwords do not match");
+  //     return;
+  //   }
+
+  //   try {
+  //     const res = await signupUser(form);
+
+  //     if (res.data === "Signup successful") {
+  //       setSuccess("Account created successfully!");
+  //       setTimeout(() => navigate("/login"), 1500);
+  //     } else {
+  //       setError(res.data);
+  //     }
+  //   } catch (err) {
+  //     setError("Signup failed. Try again.");
+  //   }
+  // };
+
+   const handleSubmit = async (e) => {
     e.preventDefault();
+
+
+    if (loading) return; // ✅ prevent multiple requests
+
+    setError("");
+    setSuccess("");
+
 
     if (form.password !== form.confirmPassword) {
       setError("Passwords do not match");
@@ -32,6 +61,7 @@ function Signup() {
     }
 
     try {
+       setLoading(true); // ✅ start loading
       const res = await signupUser(form);
 
       if (res.data === "Signup successful") {
@@ -42,6 +72,8 @@ function Signup() {
       }
     } catch (err) {
       setError("Signup failed. Try again.");
+    }finally {
+      setLoading(false); // ✅ stop loading
     }
   };
 
