@@ -58,3 +58,6 @@
   cursor: pointer;
   font-weight: bold;
 }
+.error-field {
+  border: 1px solid red;
+}

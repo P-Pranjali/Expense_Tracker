@@ -121,6 +121,7 @@ function Signup() {
           value={form.email}
           onChange={handleChange}
           required
+          className={error === "Email already registered" ? "error-field" : ""}
         />
 
         <input

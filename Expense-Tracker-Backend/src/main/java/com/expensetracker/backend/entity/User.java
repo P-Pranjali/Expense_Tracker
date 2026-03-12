@@ -3,6 +3,7 @@ package com.expensetracker.backend.entity;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.index.Indexed;
 
 @Data
 @Document(collection = "users")
@@ -15,6 +16,7 @@ public class User {
     private String lastName;
     private Integer age;
 
+     @Indexed(unique = true) //Add unique index for email
     private String email;
     private String password;
 

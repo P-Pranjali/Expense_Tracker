@@ -9,6 +9,7 @@ import com.expensetracker.backend.service.AuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.dao.DuplicateKeyException;
 @Service
 @RequiredArgsConstructor
 public class AuthServiceimpl implements AuthService {
@@ -33,7 +34,11 @@ public class AuthServiceimpl implements AuthService {
         user.setEmail(request.getEmail());
         user.setPassword(passwordEncoder.encode(request.getPassword()));
 
+         try {
         userRepository.save(user);
+    } catch (DuplicateKeyException e) {
+        return "Email already registered"; //handle unique index violation
+    }
         return "Signup successful";
     }
 

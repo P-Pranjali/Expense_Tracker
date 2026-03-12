@@ -26,7 +26,7 @@ function Login() {
       const res = await loginUser(form);
 
       if (!res.data.token) {
-        setError("Invalid credentials");
+        setError(res.data.message || "Invalid credentials");
         return;
       }
 
@@ -61,6 +61,7 @@ function Login() {
           value={form.email}
           onChange={handleChange}
           required
+            className={error.includes("User not found") || error.includes("Invalid") ? "error-field" : ""}
         />
 
         <input
