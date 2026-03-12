@@ -62,6 +62,7 @@ function Signup() {
 
   return (
     <div className="signup-container">
+       <div className="signup-wrapper">
 
     <div className="deploy-note">
       ⚠️ Note: The backend is hosted on a free server. 
@@ -143,6 +144,7 @@ function Signup() {
           <span onClick={() => navigate("/login")}>Login</span>
         </p>
       </form>
+    </div>
     </div>
   );
 }
