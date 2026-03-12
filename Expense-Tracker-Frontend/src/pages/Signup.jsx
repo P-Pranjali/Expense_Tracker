@@ -71,7 +71,11 @@ function Signup() {
         setError(res.data);
       }
     } catch (err) {
-      setError("Signup failed. Try again.");
+      if (err.response && err.response.data) {
+    setError(err.response.data); // ⭐ shows "Email already registered"
+  } else {
+    setError("Signup failed. Try again.");
+  }
     }finally {
       setLoading(false); // ✅ stop loading
     }
