@@ -17,6 +17,7 @@ function Signup() {
 
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -108,7 +109,11 @@ function Signup() {
           required
         />
 
-        <button type="submit">Create Account</button>
+      
+        {/* ✅ Button disabled during request */}
+        <button type="submit" disabled={loading}>
+          {loading ? "Creating Account..." : "Create Account"}
+        </button>
 
         <p className="switch-text">
           Already have an account?{" "}
