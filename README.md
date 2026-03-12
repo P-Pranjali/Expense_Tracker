@@ -186,16 +186,21 @@ http://localhost:3000
 
 ## 📊 Screenshots
 
+
 ### Dashboard
-![Dashboard](Screenshots/dashboard.png)
+<p align="center">
+  <img src="Screenshots/dashboard.png" width="400" height="250">
+</p>
 
 ### Add Expense
-![Add Expense](Screenshots/add-expense.png)
-
+<p align="center">
+  <img src="Screenshots/add-expense.png" width="400" height="250">
+</p>
 
 ### Profile Page
-![Profile](Screenshots/profile-page.png)
-
+<p align="center">
+  <img src="Screenshots/profile-page.png" width="400" height="250">
+</p>
 
 ---
 
