@@ -187,14 +187,14 @@ http://localhost:3000
 ## 📊 Screenshots
 
 ### Dashboard
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](Screenshots/dashboard.png)
 
 ### Add Expense
-![Add Expense](screenshots/add-expense.png)
+![Add Expense](Screenshots/add-expense.png)
 
 
 ### Profile Page
-![Profile](screenshots/profile-page.png)
+![Profile](Screenshots/profile-page.png)
 
 
 ---
