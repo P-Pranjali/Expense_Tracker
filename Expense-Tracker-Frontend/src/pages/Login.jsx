@@ -49,6 +49,11 @@ function Login() {
   return (
     <div className="login-container">
 
+       <div className="deploy-note">
+    ⚠️ Note: The backend is hosted on a free server. 
+    The first request may take 20–60 seconds to start.
+  </div>
+
       <form className="login-box" onSubmit={handleSubmit}>
         <h2>Login</h2>
 

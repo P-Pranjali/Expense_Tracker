@@ -61,3 +61,13 @@
 .error-field {
   border: 1px solid red;
 }
+.deploy-note {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  font-size: 14px;
+  text-align: center;
+}

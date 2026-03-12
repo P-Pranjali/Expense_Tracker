@@ -39,7 +39,7 @@ This project is deployed using free-tier cloud services.
 
 Because the backend runs on a **free server**, it may go to sleep after inactivity.
 
-The **first request may take around 20–60 seconds** to wake up the server.
+The **So request may take around 20–60 seconds** to wake up the server.
 
 ---
 

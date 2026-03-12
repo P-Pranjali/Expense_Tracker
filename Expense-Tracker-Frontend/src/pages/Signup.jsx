@@ -23,27 +23,6 @@ function Signup() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-
-  //   if (form.password !== form.confirmPassword) {
-  //     setError("Passwords do not match");
-  //     return;
-  //   }
-
-  //   try {
-  //     const res = await signupUser(form);
-
-  //     if (res.data === "Signup successful") {
-  //       setSuccess("Account created successfully!");
-  //       setTimeout(() => navigate("/login"), 1500);
-  //     } else {
-  //       setError(res.data);
-  //     }
-  //   } catch (err) {
-  //     setError("Signup failed. Try again.");
-  //   }
-  // };
 
    const handleSubmit = async (e) => {
     e.preventDefault();
@@ -83,6 +62,13 @@ function Signup() {
 
   return (
     <div className="signup-container">
+
+    <div className="deploy-note">
+      ⚠️ Note: The backend is hosted on a free server. 
+      The first request may take 20–60 seconds to start.
+    </div>
+
+
       <form className="signup-box" onSubmit={handleSubmit}>
         <h2>Create Account</h2>
 
